@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Cotizador - DS Automobiles</title>
+
+    <!-- <link rel="shortcut icon" href="/favicon.jpg?v=1"> -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/media.min.css" />
+
+</head>
+
+<body>
+    <div id="fl-code"></div>
+    <div class="wrap">
+        <header>
+            <div class="container flex-display flex-between">
+                <div class="left description">
+                    <h1>Deja tus datos</h1>
+                    <h2>Para recibir más información</h2>
+                </div>
+                <div class="main-logo">
+                    <a href="" title="DS Automobiles" target="_blank">DS Automobiles</a>
+                </div>
+            </div>
+        </header>
+        <div class="mega-content">
+            <form id="form2send">
+                <div class="content top">
+                    <div class="container">
+                        <div class="select modelo">
+                            <select name="modelo" id="modelo" required="required">
+                                <option value="">SELECCIONAR MODELO</option>
+                                <option value="2" data-code="ds3-crossback" data-name="DS 3 Crossback"
+                                    data-gtm='{"id": 6492943,"type": "ds_lp0","cat": "lpg_c0"}'>DS 3 Crossback</option>
+                                <option value="4" data-code="ds7-crossback" data-name="DS 7 Crossback"
+                                    data-gtm='{"id": 6492943,"type": "ds_lp0","cat": "lpg_c001"}'>DS 7 Crossback
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="content center">
+                    <div class="container flex-display">
+                        <div class="left form">
+                            <div class="information personal">
+                                <div class="group two-input">
+                                    <div class="subgroup">
+                                        <label for="nombre">(*) Nombre</label>
+                                        <input type="text" name="nombre" id="nombre" tabindex="1" required="required" />
+                                    </div>
+                                    <div class="subgroup">
+                                        <label for="apellido">(*) Apellido</label>
+                                        <input type="text" name="apellido" id="apellido" tabindex="2"
+                                            required="required" />
+                                    </div>
+                                </div>
+                                <div class="group two-input">
+                                    <div class="subgroup">
+                                        <label for="telefono">(*) Teléfono</label>
+                                        <input type="text" name="telefono" id="telefono" tabindex="3"
+                                            required="required" />
+                                    </div>
+                                    <div class="subgroup">
+                                        <label for="email">(*) Email</label>
+                                        <input type="email" name="email" id="email" tabindex="4" required="required" />
+                                    </div>
+                                </div>
+                                <div class="group two-input">
+                                    <div class="subgroup">
+                                        <label for="rut">(*) RUT</label>
+                                        <input type="text" name="rut" id="rut" tabindex="5" maxlength="10"
+                                            required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="information store">
+                                <p class="title-section">Seleccionar Concesionario</p>
+                                <div class="group">
+                                    <p>SALÓN DS, Av. Las Condes 11150, Vitacura. Región Metropolitana</p>
+                                </div>
+                                <div class="group">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="newsletter" id="newsletter" tabindex="9" />
+                                        <label for="newsletter">Suscribirse al Newsletter. Podrás ver las últimas
+                                            noticias, lanzamientos de productos y promociones de DS Automobiles.</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group submit">
+                                <div class="subgroup">
+                                    <button type="submit" class="btn-submit">Reservar</button>
+                                    <button type="submit" class="btn-submit">Comprar</button>
+                                    <p>(*) Campos Obligatorios</p>
+                                </div>
+                            </div>
+                            <div class="inputHidden">
+                                <input type="text" name="ipt_modelo" value="DS 3 Crossback" />
+                                <!--<input type="text" name="ipt_version" />-->
+                                <input type="text" name="ipt_autorenuevate" value="17.990.000" />
+                            </div>
+                        </div>
+                        <div class="right version">
+                            <div class="image-version">
+                                <!--<div class="loader">Cargando...</div>-->
+                                <span style="background-image: url('images/modelos/ds3-crossback.png');">DS 3 Crossback
+                                    BlueHDI 100 S&S BVM6 Bastille</span>
+                            </div>
+                            <div class="prices-list">
+                                <div class="top">
+                                    <div class="name-version">
+                                        <h1>DS 3 Crossback</h1>
+                                        <h2>BlueHDI 100 S&S BVM6 Bastille</h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="plan-autorenuevate">
+                                        <p>Precio desde <span>(AutoRenuévate)</span></p>
+                                        <p><span>$ </span><span>17.990.000</span></p>
+                                    </div>
+                                    <!--<div class="select version">
+                                        <label for="version">Otras Versiones</label>
+                                        <select name="version" id="version" required="required">
+                                            <option value="">Seleccionar Versión</option>
+                                        </select>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="content bottom">
+            <div class="features">
+                <div class="container">
+                    <div class="version">
+                        <div class="left">
+                            <p><a href=""
+                                    title="DS 3 Crossback">Conoce más sobre "<span>DS 3 Crossback</span>"</a></p>
+                            <div class="btn-legal">
+                                <input type="checkbox" class="toggle-box" id="summary" />
+                                <label for="summary">Ver Legales</label>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li>
+                                    <div class="cont-image">
+                                        <span
+                                            style="background-image: url('images/caracteristicas/ds3-crossback/diseno.png?v=1.0')">Diseño</span>
+                                    </div>
+                                    <p>Diseño</p>
+                                </li>
+                                <li>
+                                    <div class="cont-image">
+                                        <span
+                                            style="background-image: url('images/caracteristicas/ds3-crossback/ds-acess.png?v=1.0')">DS
+                                            Access</span>
+                                    </div>
+                                    <p>DS Access</p>
+                                </li>
+                                <li>
+                                    <div class="cont-image">
+                                        <span
+                                            style="background-image: url('images/caracteristicas/ds3-crossback/interior.png?v=1.0')">Interior</span>
+                                    </div>
+                                    <p>Interior</p>
+                                </li>
+                                <li>
+                                    <div class="cont-image">
+                                        <span
+                                            style="background-image: url('images/caracteristicas/ds3-crossback/led-vision.png?v=1.0')">LED
+                                            Vision</span>
+                                    </div>
+                                    <p>LED Vision</p>
+                                </li>
+                                <li>
+                                    <div class="cont-image">
+                                        <span
+                                            style="background-image: url('images/caracteristicas/ds3-crossback/head-up-display.png?v=1.0')">Head
+                                            Up Display</span>
+                                    </div>
+                                    <p>Head Up Display</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="legal">
+                        <div class="btn-legal">
+                            <input type="checkbox" class="toggle-box" id="summary" />
+                            <label for="summary">Ver Legales</label>
+                        </div>
+                        <div class="summary">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

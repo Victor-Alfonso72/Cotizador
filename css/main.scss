@@ -1,0 +1,857 @@
+$mainFontSize: 16px;
+@function px2rem($px) {
+  @return #{$px / $mainFontSize}rem;
+}
+
+@font-face {
+  font-family: "citroenLight";
+  src: url("../fonts/citroen_light.eot");
+  src: url("../fonts/citroen_light.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/citroen_light.woff") format("woff"),
+  url("../fonts/citroen_light.ttf") format("truetype"),
+  url("../fonts/citroen_light.svg#Citroen-Light") format("svg");
+  src: url("../fonts/citroen_light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "citroenRegular";
+  src: url("../fonts/citroen_regular.eot");
+  src: url("../fonts/citroen_regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/citroen_regular.woff") format("woff"),
+  url("../fonts/citroen_regular.ttf") format("truetype"),
+  url("../fonts/citroen_regular.svg#Citroen") format("svg");
+  src: url("../fonts/citroen_regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DSAutomobilesRegular";
+  src: url("../fonts/dsautomobiles_regular.eot");
+  src: url("../fonts/dsautomobiles_regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/dsautomobiles_regular.woff") format("woff"),
+  url("../fonts/dsautomobiles_regular.ttf") format("truetype"),
+  url("../fonts/dsautomobiles_regular.svg#Citroen") format("svg");
+  src: url("../fonts/dsautomobiles_regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "citroenBold";
+  src: url("../fonts/citroen_bold.eot");
+  src: url("../fonts/citroen_bold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/citroen_bold.woff") format("woff"),
+  url("../fonts/citroen_bold.ttf") format("truetype"),
+  url("../fonts/citroen_bold.svg#Citroen-Bold") format("svg");
+  src: url("../fonts/citroen_bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DSAutomobilesBold";
+  src: url("../fonts/dsautomobiles_bold.eot");
+  src: url("../fonts/dsautomobiles_bold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/dsautomobiles_bold.woff") format("woff"),
+  url("../fonts/dsautomobiles_bold.ttf") format("truetype"),
+  url("../fonts/dsautomobiles_bold.svg#Citroen") format("svg");
+  src: url("../fonts/dsautomobiles_bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DSAutomobilesExtraBold";
+  src: url("../fonts/dsautomobiles_extrabold.eot");
+  src: url("../fonts/dsautomobiles_extrabold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/dsautomobiles_extrabold.woff") format("woff"),
+  url("../fonts/dsautomobiles_extrabold.ttf") format("truetype"),
+  url("../fonts/dsautomobiles_extrabold.svg#Citroen") format("svg");
+  src: url("../fonts/dsautomobiles_extrabold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+* {
+  -webkit-font-feature-settings: "liga" 0;
+  -moz-font-feature-settings: "liga" 0;
+  -ms-font-feature-settings: "liga" 0;
+  font-feature-settings: "liga" 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  color: #FFFFFF;
+  font-size: $mainFontSize;
+  font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+  font-weight: 400;;
+  background-color: #FFFFFF;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  max-width: 1235px;
+  z-index: 1;
+
+  &.flex-display {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+
+  &.flex-between {
+    justify-content: space-between;
+  }
+
+  &.flex-end {
+    justify-content: flex-end;
+  }
+}
+
+header {
+  background-color: #2E2221;
+
+  .container {
+    align-items: center;
+  }
+
+  .left.description {
+    h1 {
+      margin: 0;
+      font-size: px2rem(30px);
+      font-family: "DSAutomobilesExtraBold", "Ubuntu", sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: px2rem(20px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  .main-logo {
+    a {
+      width: 102px;
+      height: 75px;
+      display: block;
+      text-indent: -9999px;
+      background-image: url("../images/dsautomobiles_logo.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+}
+
+.mega-content {
+  height: calc(100vh - 75px);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  background-color: #2E2221;
+  flex-direction: column;
+  justify-content: center;
+
+  span.error {
+    bottom: -14px;
+    left: 0;
+    font-size: px2rem(12px);
+    position: absolute;
+    text-transform: uppercase;
+  }
+}
+
+.content {
+  &.top {
+    padding: 15px 0 0;
+
+    .select {
+      position: relative;
+      z-index: 1;
+
+      &:after {
+        content: "";
+        top: 0;
+        right: 5px;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        pointer-events: none;
+        background-image: url("../images/rounded-down_wh.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
+      &.modelo {
+        width: 50%;
+        display: block;
+        max-width: 273px;
+
+        select {
+          width: 100%;
+          height: 30px;
+          padding: 0 10px;
+          display: block;
+          color: #FFFFFF;
+          font-size: px2rem(15px);
+          font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+          font-weight: 400;
+          border-radius: 25px;
+          border: 1px solid #ADA297;
+          background-color: #ADA297;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+      }
+    }
+  }
+
+  &.center {
+    .left {
+      flex-basis: 50%;
+
+      .information {
+        padding: 24px 0 0;
+
+        .title-section {
+          margin: 0 0 15px;
+          font-size: px2rem(20px);
+          font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .group {
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: flex;
+          align-items: center;
+
+          &.two-input {
+            .subgroup {
+              flex-basis: 50%;
+            }
+          }
+
+          .subgroup {
+            margin-bottom: 15px;
+            position: relative;
+
+            label {
+              width: 100%;
+              margin: 0 0 5px;
+              display: block;
+              font-size: px2rem(16px);
+            }
+
+            input:not([type="checkbox"]) {
+              width: 90%;
+              height: 30px;
+              padding: 0 0 0 10px;
+              display: block;
+              color: #FFFFFF;
+              border-radius: 25px;
+              border: 1px solid rgba(#ADA297, .5);
+              background-color: #2E2221;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
+
+            .select {
+              width: 90%;
+              position: relative;
+              z-index: 1;
+
+              &:after {
+                content: "";
+                top: 0;
+                right: 1px;
+                bottom: 0;
+                width: 28px;
+                height: 28px;
+                margin: auto;
+                display: block;
+                position: absolute;
+                z-index: 2;
+                pointer-events: none;
+                background-image: url("../images/rounded-down.svg");
+                background-color: #2E2221;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 80%;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+              }
+
+              select {
+                width: 100%;
+                height: 30px;
+                padding: 0 10px;
+                display: block;
+                color: #FFFFFF;
+                font-size: px2rem(14px);
+                font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+                font-weight: 400;
+                border-radius: 25px;
+                border: 1px solid rgba(#ADA297, .5);
+                background-color: #2E2221;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+              }
+            }
+          }
+        }
+
+        &.store {
+          .group {
+            p {
+              margin: 0 0 30px;
+              font-size: px2rem(18px);
+              font-family: "DSAutomobilesBold", "Ubuntu", sans-serif;
+              font-weight: 700;
+
+            }
+          }
+
+          .checkbox {
+            margin: 0 0 20px;
+            position: relative;
+
+            input {
+              width: 20px;
+              height: 20px;
+              margin-right: 4px;
+              display: inline-block;
+              border-radius: 100%;
+              border: 1px solid #ADA297;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              -o-appearance: none;
+              appearance: none;
+
+              &:checked {
+                background-color: #7C1144;
+              }
+            }
+
+            label {
+              width: calc(90% - 22px);
+              display: inline-block;
+              font-size: px2rem(14px);
+              font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+              font-weight: 400;
+              line-height: 1;
+              vertical-align: top;
+            }
+          }
+        }
+      }
+
+      .group {
+        &.submit {
+          margin: 8px 0 0 auto;
+
+          .subgroup {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+              padding: 5px 50px 5px 40px;
+              display: inline-block;
+              color: #FFFFFF;
+              font-size: px2rem(15px);
+              font-family: "citroenBold", "Ubuntu", sans-serif;
+              font-weight: 700;
+              position: relative;
+              cursor: pointer;
+              border-radius: 25px;
+              border: 1px solid #ADA297;
+              background-color: #ADA297;
+              text-transform: uppercase;
+              -webkit-transition: all 250ms ease-in-out;
+              -moz-transition: all 250ms ease-in-out;
+              -ms-transition: all 250ms ease-in-out;
+              -o-transition: all 250ms ease-in-out;
+              transition: all 250ms ease-in-out;
+
+              &:after {
+                content: "";
+                top: 2px;
+                right: 5px;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                margin: auto;
+                display: block;
+                position: absolute;
+                z-index: 2;
+                pointer-events: none;
+                background-image: url("../images/rounded-down_wh.svg");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                -webkit-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+              }
+
+              &:hover {
+                color: #FFFFFF;
+                background-color: #7C1144;
+                border-color: #7C1144;
+              }
+            }
+
+            p {
+              padding-right: 45px;
+              font-size: px2rem(14px);
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .inputHidden {
+        display: none;
+      }
+    }
+
+    .right {
+      flex-basis: 50%;
+
+      .image-version {
+        position: relative;
+
+        span {
+          min-height: 300px;
+          display: block;
+          text-indent: -9999px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+      }
+
+      .prices-list {
+        padding: 0 0 0 8%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+
+        .top {
+          margin-bottom: 40px;
+          padding-bottom: 40px;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid rgba(#FFFFFF, .5);
+
+          .name-version {
+
+            h1 {
+              margin: 0;
+              font-size: px2rem(24px);
+              font-family: "DSAutomobilesBold", "Ubuntu", sans-serif;
+              font-weight: 700;
+              line-height: 1;
+              text-transform: uppercase;
+            }
+
+            h2 {
+              margin: 0;
+              font-size: px2rem(18px);
+              font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+              font-weight: 400;
+              line-height: 1;
+            }
+          }
+        }
+
+        .bottom {
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: flex;
+          align-items: center;
+
+          .plan-autorenuevate {
+            flex-basis: 100%;
+
+            p {
+              margin: 0;
+
+              &:nth-child(1) {
+                margin-bottom: 6px;
+                font-size: px2rem(14px);
+                font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+                font-weight: 400;
+                line-height: 1;
+                text-transform: uppercase;
+
+                span:nth-child(1) {
+                  font-size: px2rem(10px);
+                }
+              }
+
+              &:nth-child(2) {
+                font-size: px2rem(24px);
+                font-family: "DSAutomobilesBold", "Ubuntu", sans-serif;
+                font-weight: 700;
+                line-height: 1;
+
+                span:nth-child(1) {
+                  font-size: px2rem(14px);
+                  margin-right: -4px;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+
+          .select.version {
+            flex-basis: 40%;
+            position: relative;
+            z-index: 1;
+
+            &:after {
+              content: "";
+              top: 22px;
+              right: 1px;
+              bottom: 0;
+              width: 28px;
+              height: 28px;
+              margin: auto;
+              display: block;
+              position: absolute;
+              z-index: 2;
+              pointer-events: none;
+              background-image: url("../images/rounded-down.svg");
+              background-color: #ADA297;
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: 72%;
+              border-top-right-radius: 25px;
+              border-bottom-right-radius: 25px;
+            }
+
+            label {
+              margin-bottom: 4px;
+              display: block;
+              font-size: px2rem(16px);
+              font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+              font-weight: 400;
+              text-transform: uppercase;
+            }
+
+            select {
+              width: 100%;
+              height: 30px;
+              padding: 0 10px;
+              display: block;
+              color: #FFFFFF;
+              font-size: px2rem(14px);
+              font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+              font-weight: 400;
+              border-radius: 25px;
+              border: 1px solid rgba(#ADA297, .5);
+              background-color: #ADA297;
+              text-transform: uppercase;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.bottom {
+    .features {
+      padding: 20px 0 15px;
+
+      .version {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        font-size: px2rem(20px);
+        font-family: "citroenBold", "Ubuntu", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        align-items: center;
+
+        .left {
+          width: 40%;
+          flex-basis: 40%;
+          position: relative;
+
+          &:before {
+            content: "";
+            top: 27px;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            margin: auto;
+            position: absolute;
+            z-index: -1;
+            background-color: rgba(100, 100, 100, .5);
+          }
+
+          p {
+            padding: 0 15px;
+            display: inline-block;
+            font-size: px2rem(18px);
+            font-family: "citroenBold", "Ubuntu", sans-serif;
+            font-weight: 700;
+            background-color: #FFFFFF;
+
+            a {
+              color: #7C1144;
+              text-decoration: none;
+              -webkit-transition: color 250ms ease-in-out;
+              -moz-transition: color 250ms ease-in-out;
+              -o-transition: color 250ms ease-in-out;
+              transition: color 250ms ease-in-out;
+
+              &:hover {
+                color: #ADA297;
+              }
+            }
+          }
+        }
+
+        .right {
+          width: 60%;
+          flex-basis: 60%;
+
+          ul {
+            margin: 0;
+            padding: 0 0 0 20px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            list-style: none;
+            font-size: 0;
+            justify-content: space-evenly;
+
+            li {
+              width: 150px;
+              position: relative;
+
+              .cont-image {
+                width: 80px;
+                height: 56px;
+                margin: 0 0 10px 46px;
+                display: block;
+                overflow: hidden;
+                -webkit-transform: skew(-30deg, 0deg);
+                -moz-transform: skew(-30deg, 0deg);
+                -ms-transform: skew(-30deg, 0deg);
+                -o-transform: skew(-30deg, 0deg);
+                transform: skew(-30deg, 0deg);
+
+                span {
+                  width: 150%;
+                  height: 100%;
+                  display: block;
+                  background-repeat: no-repeat;
+                  background-position: 0 0;
+                  background-size: cover;
+                  -webkit-transform: translateX(-20px) skew(30deg, 0deg);
+                  -moz-transform: translateX(-20px) skew(30deg, 0deg);
+                  -ms-transform: translateX(-20px) skew(30deg, 0deg);
+                  -o-transform: translateX(-20px) skew(30deg, 0deg);
+                  transform: translateX(-20px) skew(30deg, 0deg);
+                }
+              }
+
+              p {
+                margin: 0 0 10px;
+                color: #000000;
+                font-size: px2rem(12px);
+                font-family: "citroenBold", "Ubuntu", sans-serif;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+
+      .legal {
+        text-align: center;
+
+        .btn-legal {
+          display: none;
+        }
+
+        .summary {
+          display: none;
+          margin-bottom: 10px;
+
+          p {
+            margin: 22px 0 0;
+            color: #000000;
+            font-size: px2rem(14px);
+            font-family: "citroenRegular", "Ubuntu", sans-serif;
+            font-weight: 400;
+            text-align: justify;
+          }
+
+        }
+      }
+
+      .btn-legal {
+        .toggle-box {
+          display: none;
+
+          & + label {
+            padding: 8px 35px 8px 10px;
+            display: inline-block;
+            color: #FFFFFF;
+            font-size: px2rem(14px);
+            font-family: "citroenRegular", "Ubuntu", sans-serif;
+            font-weight: 400;
+            position: relative;
+            border-radius: 25px;
+            border: 1px solid #ADA297;
+            background-color: #ADA297;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:after {
+              content: "";
+              top: 0;
+              right: 5px;
+              bottom: 0;
+              width: 20px;
+              height: 20px;
+              margin: auto;
+              display: block;
+              position: absolute;
+              z-index: 2;
+              pointer-events: none;
+              background-image: url("../images/rounded-down_wh.svg");
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: contain;
+              -webkit-transition: all 250ms ease-in-out;
+              -moz-transition: all 250ms ease-in-out;
+              -ms-transition: all 250ms ease-in-out;
+              -o-transition: all 250ms ease-in-out;
+              transition: all 250ms ease-in-out;
+            }
+          }
+
+          &:checked {
+            & + label {
+              &:after {
+                -webkit-transform: rotate(-180deg);
+                -moz-transform: rotate(-180deg);
+                -ms-transform: rotate(-180deg);
+                -o-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.exitpage {
+    .message {
+      text-align: center;
+
+      h1 {
+        margin: 0 0 10px;
+        color: #FFFFFF;
+        font-size: px2rem(36px);
+        font-family: "DSAutomobilesExtraBold", "Ubuntu", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+        display: inline-block;
+        color: #FFFFFF;
+        font-size: px2rem(24px);
+        font-family: "DSAutomobilesRegular", "Ubuntu", sans-serif;
+        font-weight: 400;
+        position: relative;
+        text-transform: uppercase;
+
+        &:before {
+          content: "";
+          top: 0;
+          bottom: 0;
+          left: -50px;
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          display: block;
+          position: absolute;
+          background-image: url('../images/checkout.svg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
